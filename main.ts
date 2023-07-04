@@ -28,6 +28,9 @@ info.onCountdownEnd(function () {
         game.gameOver(false)
     }
 })
+sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Food, function (sprite, otherSprite) {
+    Steve_Jobs.setPosition(randint(0, 120), randint(0, 120))
+})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
     Steve_Jobs.setPosition(randint(0, 120), randint(0, 120))
     info.changeScoreBy(100)
